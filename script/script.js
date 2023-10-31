@@ -20,57 +20,37 @@ let total = (cantidad, categoria, div) => {
   }
 };
 
-let emptyInput = (input) => {
-  if (input.value === "") {
-    input.style.borderColor = "red";
-    return true;
-  } else {
-    input.style.borderColor = "green";
-  }
+let emptyInput = (inputs) => {
+  let hasError = false;
+
+  inputs.forEach(input => {
+    if (input.value === "") {
+      input.style.borderColor = "red";
+      hasError = true;
+    } else {
+      input.style.borderColor = "green";
+    }
+  });
+
+  return hasError;
 };
 
 resume.addEventListener("click", (e) => {
   e.preventDefault();
 
-  let hasError = false;
+  // Obtén todos los campos de entrada en el formulario
+  const camposDeEntrada = [nombre, surname, email, cantidad];
 
-  // Verifica campos vacíos utilizando un switch
-  switch (true) {
-    case emptyInput(nombre):
-      Swal.fire({
-        icon: "error",
-        title: "Por favor, ingrese su nombre",
-      });
-      hasError = true;
-      break;
-    case emptyInput(surname):
-      Swal.fire({
-        icon: "error",
-        title: "Por favor, ingrese su apellido",
-      });
-      hasError = true;
-      break;
-    case emptyInput(email):
-      Swal.fire({
-        icon: "error",
-        title: "Por favor, ingrese su correo electrónico",
-      });
-      hasError = true;
-      break;
-    case emptyInput(cantidad):
-      Swal.fire({
-        icon: "error",
-        title: "Por favor, ingrese la cantidad",
-      });
-      hasError = true;
-      break;
-    default:
-      // No hay campos vacíos
-      break;
-  }
+  // Verifica campos vacíos utilizando la función modified emptyInput
+  let hasError = emptyInput(camposDeEntrada);
 
-  // Si no hay errores, muestra un mensaje de éxito y permite continuar
-  if (!hasError) {
+  if (hasError) {
+    Swal.fire({
+      icon: "error",
+      title: "Por favor, complete todos los campos obligatorios",
+    });
+  } else {
+    // No hay campos vacíos, continúa con el proceso
     Swal.fire({
       icon: "success",
       title: "Gracias por realizar tu compra",
@@ -80,7 +60,7 @@ resume.addEventListener("click", (e) => {
       confirmButtonText: "Continuar",
     }).then((result) => {
       if (result.isConfirmed) {
-        window.location.href = "./index.html";
+        // Aquí puedes realizar otras acciones después de completar el proceso
       }
     });
   }
@@ -90,9 +70,18 @@ select.addEventListener("change", (e) => {
   if (e.target.value === "Seleccione categoria") {
     divTotal.textContent = "Total a pagar: $";
   }
-  total(cantidad.value, e.target.value, divTotal);
+  total(cantidad.value, select.value, divTotal);
 });
 
 cantidad.addEventListener("input", (e) => {
   total(cantidad.value, select.value, divTotal);
+});
+
+// Agrega un manejador de eventos al botón "Borrar" para restablecer los estilos
+const botonBorrar = document.querySelector('input[type="reset"]');
+botonBorrar.addEventListener("click", function() {
+  const camposDeEntrada = [nombre, surname, email, cantidad];
+  camposDeEntrada.forEach(function(input) {
+    input.style.borderColor = ""; // Restablece el color de borde
+  });
 });
