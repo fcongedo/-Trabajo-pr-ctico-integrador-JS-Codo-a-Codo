@@ -30,130 +30,138 @@
           <a class="nav-link " href="#">Los oradores</a>
           <a class="nav-link " href="#">El lugar y la fecha</a>
           <a class="nav-link " href="#">Conviértete en orador</a>
-          <a class="nav-link active text-success" href="#">Comprar tickets</a>
+          <a class="nav-link active text-success" href="./tickets.html ">Comprar tickets</a>
         </div>
       </div>
     </div>
   </nav>
-
-  <!-- Contenedor principal -->
-  <div class="container-descuentos" id="categoria">
-    <!-- Categorías de tickets con descuento -->
-    <div class="categoria-container">
-      <div class="row row-cols-1 row-cols-md-3 g-4">
-        <!-- Categoría "Estudiante" -->
-        <div class="card-categoria">
-          <div class="card-estudiante">
-            <div class="card-body">
-              <h5 class="card-title">Estudiante</h5>
-              <p class="card-text">Tienen un descuento</p>
-              <p class="card-porcentaje">80%</p>
-              <p> * presentar documentación</p>
+  <section class="showcase">
+    <div class="shadow">
+        <div class="container-flex">
+            <div class="content">
+                <h1>Conf Bs As</h1>
+                <p>Bs As llega por primera vez a Argentina. Un eveto para compratir con nuestra comunidad el
+                    conocimiento y experiencia de los expertos que estan creando el futuro de Internet. Ven a
+                    conocer a
+                    miembros del evento, a otros estudiantes de Codo a Codo y los oradores de primer nivel que
+                    tenemos
+                    para ti. Te esperamos!</p>
+                <div class="buttonarea">
+                    <a class="btn btn-transparent" href="#orador">Quiero ser orador</a>
+                    <a class="btn btn-solid" href="./tickets.html">Comprar tickets</a>
+                </div>
             </div>
-          </div>
         </div>
-        <!-- Categoría "Trainee" -->
-        <div class="card-categoria">
-          <div class="card-trainee">
-            <div class="card-body">
-              <h5 class="card-title">Trainee</h5>
-              <p class="card-text">Tienen un descuento</p>
-              <p class="card-porcentaje">50%</p>
-              <p> * presentar documentación</p>
-            </div>
-          </div>
-        </div>
-        <!-- Categoría "Junior" -->
-        <div class="card-categoria">
-          <div class="card-junior">
-            <div class="card-body">
-              <h5 class="card-title">Junior</h5>
-              <p class="card-text">Tienen un descuento</p>
-              <p class="card-porcentaje">15%</p>
-              <p> * presentar documentación</p>
-            </div>
-          </div>
-        </div>
-      </div>
     </div>
+</section>
+<section class="speakers" id="speakers">
+    <div class="title">
+        <h6>CONOCE A LOS</h6>
+        <h2>ORADORES</h2>
+    </div>
+    <div class="container-speakers">
+        <div class="card">
+            <img src="imagenes/steve.jpg" alt="Steve Jobs">
+            <div class="skills">
+                <h6 class="yellow">JavaScript</h6>
+                <h6 class="cyan">React</h6>
+            </div>
+            <h3>Steve Jobs</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, expedita pariatur officiis dicta
+                tempore repellat!</p>
+        </div>
+        <div class="card">
+            <img src="imagenes/bill.jpg" alt="Bill Gates">
+            <div class="skills">
+                <h6 class="yellow">JavaScript</h6>
+                <h6 class="cyan">React</h6>
+            </div>
+            <h3>Bill Gates</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, expedita pariatur officiis dicta
+                tempore repellat!</p>
+        </div>
+        <div class="card">
+            <img src="imagenes/ada.jpeg" alt="Ada Lovelace">
+            <div class="skills">
+                <h6 class="grey">Negocios</h6>
+                <h6 class="magenta">Startups</h6>
+            </div>
+            <h3>Ada Lovelace</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, expedita pariatur officiis dicta
+                tempore repellat!</p>
+        </div>
+    </div>
+</section>
 
-    <!-- Información de venta de tickets -->
-    <p class="text-center mt-3 mb-0">VENTA</p>
-    <h2 class="text-center m-2 p-1 fw-semibold">VALOR DE TICKET $200</h2>
-    <!-- Formulario de compra de tickets -->
-    <form class="w-50  mx-auto">
-      <div class="row ">
-        <div class="col p-2">
-          <input type="text" class="form-control name" placeholder="Nombre" aria-label="First name" required>
+<section class="call-to-action">
+    <div class="container-cta">
+        <img src="imagenes/honolulu.jpg" alt="Honolulu">
+        <div class="cta-content">
+            <h2>Bs As - Octubre</h2>
+            <p>Buenos Aires es la provincia y localidad más grande del estado de Argentina, en los Estados Unidos.
+                Honolulu es la mas sureña de entre las principales ciudades estadounidenses. Aunque el nombre de
+                Honolulu se refiere al área urbana en la costa sureste de la isla de Oahu, la ciudad y el condado de
+                Honolulu han formado una ciudad-condado consolidada que cubre toda la ciudad (aproximadamente 600
+                km2 de superficie.</p>
+            <a href="#" class="btn btn-transparent">Conocé más</a>
         </div>
-        <div class="col p-2">
-          <input type="text" class="form-control surname" placeholder="Apellido" aria-label="Last name" required>
-        </div>
-        <div class="row p-2 mx-auto">
-          <input type="text" class="form-control email" placeholder="Correo" aria-label="Mail" required>
-        </div>
-        <div class="col-md-6 p-2">
-          <label for="items" class="p-2">Cantidad</label>
-          <input type="text" class="form-control cantidad" placeholder="Cantidad" aria-label="Items" id="items"
-            required>
-        </div>
-        <div class="col-md-6 p-2">
-          <label for="select" class="p-2">Categoria</label>
-          <select class="form-select " aria-label="Default select example" id="select" required>
-            <option value="1">Estudiante</option>
-            <option value="2">Trainee</option>
-            <option value="3">Junior</option>
-          </select>
-        </div>
-        <div class="col-12 rounded mx-auto blue d-flex align-items-center">
-          <p class="p-2 m-0 total">Total a pagar: $</p>
-        </div>
-        <div class="col-md-6 p-2">
-          <input type="reset" class="btn btn-success green2 border-0 fw-bold w-100" value="Borrar">
-        </div>
-        <div class="col-md-6 p-2">
-          <input type="submit" class="btn btn-success green2 border-0 fw-bold w-100 resume" value="Resumen">
-        </div>
-      </div>
-    </form>
-  </div>
-</div>
+    </div>
+</section>
 
-<!-- Pie de página -->
+ <!-- FORM -->
+ <section class="form" id="orador">
+    <div class="title">
+        <h6>CONVIERTETE EN UN</h6>
+        <h2>ORADOR</h2>
+        <h3>Anótate como orador para dar una <span class="underline">charla unite.</span> Cuéntanos de qué quieres
+            hablar!</h3>
+    </div>
+    <div class="container-form">
+        <form action="">
+            <div class="first-last-name">
+                <input type="text" class="input-name" name="input-firtname" placeholder="Nombre" required>
+                <input type="text" class="input-name" name="input-lastname" placeholder="Apellido" required>
+            </div>
+            <textarea class="input-about" name="input-about" id="" cols="30" rows="6"
+                placeholder="Sobre qué quieres hablar?" required></textarea>
+            <h6>Recuerda incluir un título para tu charla</h6>
+            <input class="btn-submit" type="submit" value="Enviar">
+        </form>
+    </div>
+</section>
+
+  <!-- Pie de página -->
 <footer>
-  <nav class="navbar navbar-expand-lg navbar-light justify-content-center text-center navFooter">
-    <ul class="navbar-nav gap-5">
-      <li class="nav-item">
-        <a class="nav-link fs-6 text-white" href="#">Preguntas<br>Frecuentes</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link fs-6 text-white" href="#">Contáctanos</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link fs-6 text-white" href="#">Prensa</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link fs-6 text-white" href="#">Términos<br>y condiciones</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link fs-6 text-white" href="#">Privacidad</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link fs-6 text-white" href="#">Estudiantes</a>
-      </li>
-    </ul>
-  </nav>
-  <!-- Texto adicional en el footer -->
-  <div class="text-center text-white">
-    &copy; 2023 Codo a Codo. Todos los derechos reservados.
-  </div>
-</footer>
-
-<!-- Scripts al final del documento -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
-  integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
-  crossorigin="anonymous"></script>
-<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-<script src="script/script.js"></script>
-</body>
-</html>
+    <nav class="navbar navbar-expand-lg navbar-light justify-content-center text-center navFooter">
+      <ul class="navbar-nav gap-5">
+        <li class="nav-item">
+          <a class="nav-link fs-6 text-white" href="#">Preguntas<br>Frecuentes</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link fs-6 text-white" href="#">Contáctanos</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link fs-6 text-white" href="#">Prensa</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link fs-6 text-white" href="#">Términos<br>y condiciones</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link fs-6 text-white" href="#">Privacidad</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link fs-6 text-white" href="#">Estudiantes</a>
+        </li>
+      </ul>
+    </nav>
+    <!-- Texto adicional en el footer -->
+    <div class="text-center text-white">
+      &copy; 2023 Codo a Codo. Todos los derechos reservados.
+    </div>
+  </footer>
+  
+  <!-- Scripts al final del documento -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+    crossorigin="anonymous"></script>
+  </body>
